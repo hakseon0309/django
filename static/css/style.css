@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dongle:wght@700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --hc-color-bg               :#121212;   /* 30 31 34 */
+    --hc-color-sideBar          :#2b2d31;   /* 43 45 49 */
+    --hc-color-post             :#313338;   /* 49 51 56 */
+    --hc-color-clear            :#00000000;
+    --hc-color-font             :#e8e8e8;
+    --hc-color-sub              :#8d8c8e;
+    --hc-color-point-1          :#ff0000;
+
+    --hc-wow-color-warrior      :#c79c6e;
+    --hc-wow-color-paladin      :#f58cba;
+    --hc-wow-color-deathKnight  :#c41f3b;
+    --hc-wow-color-hunter       :#abd473;
+    --hc-wow-color-shaman       :#0070de;
+    --hc-wow-color-evoker       :#33937F;
+    --hc-wow-color-rogue        :#fff569;
+    --hc-wow-color-druid        :#ff7d0a;
+    --hc-wow-color-monk         :#00ff96;
+    --hc-wow-color-demonHunter  :#a330c9;
+    --hc-wow-color-priest       :#ffffff;
+    --hc-wow-color-mage         :#69ccf0;
+    --hc-wow-color-warlock      :#9482c9;
+
+    --hc-wow-color-shadowflame  :#A335EE;
+
+    --hc-color-aberrus-bg-1     :rgb(25, 25, 25);
+    --hc-color-aberrus-bg-2     :rgb(30, 30, 30);
+    --hc-color-aberrus-bg-3     :rgb(35, 35, 35);
+    --hc-color-aberrus-border-1 :rgb(60, 60, 60);
+
+    --hc-min-width              : 500px;
+    --hc-max-width              : 956px;
+    --hc-min-height             : 500px;
+    --hc-max-height             : 956px;
+
+    --hc-width-sideBar          : 200px;
+
+    --hc-height-header          : 24px;
+    --hc-post-title-height      : 48px;
+
+    --hc-font-main              : 'Noto Sans KR', sans-serif;
+    --hc-font-header            : 'Dongle', sans-serif;
+    --hc-font-strong            : 'Black Han Sans', sans-serif;
+}
+
+.warrior        {color: var(--hc-wow-color-warrior)     ;}
+.paladin        {color: var(--hc-wow-color-paladin)     ;}
+.deathKnight    {color: var(--hc-wow-color-deathKnight) ;}
+.hunter         {color: var(--hc-wow-color-hunter)      ;}
+.shaman         {color: var(--hc-wow-color-shaman)      ;}
+.evoker         {color: var(--hc-wow-color-evoker)      ;}
+.rogue          {color: var(--hc-wow-color-rogue)       ;}
+.monk           {color: var(--hc-wow-color-monk)        ;}
+.demonHunter    {color: var(--hc-wow-color-demonHunter) ;}
+.priest         {color: var(--hc-wow-color-priest)      ;}
+.mage           {color: var(--hc-wow-color-mage)        ;}
+.warlock        {color: var(--hc-wow-color-warlock)     ;}
+
+body {
+    background-color    : var(--hc-color-bg);
+    color               : var(--hc-color-font);
+
+    padding             : 0px 10px 10px 10px;
+    margin              : 0px;
+
+    font-family         : var(--hc-font-main);
+}
+
+header {
+    font-size: 1rem;
+    /* font-family: var(--hc-font-header); */
+    background-color: #33937F;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+aside {
+    background-color: var(--hc-color-sideBar);
+}
+
+aside .banner {
+    width: 200px;
+}
+
+aside .profile {
+}
+
+aside .profile .text {
+    margin-left: 10px;
+}
