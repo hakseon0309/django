@@ -11,17 +11,8 @@
     {% include 'header.html' %}
     <div class="container">
         {% include 'aside.html' %}
-        <div>
-            {% for text in profile %}
-                <div>
-                    <h5>{{profile.name}}</h5>
-                </div>
-            {% endfor %}
-        </div>
+        {% block content %} 
+        {% endblock %}
     </div>
-
-    {% block content %}
-
-    {% endblock content %}
 </body>
 </html>
