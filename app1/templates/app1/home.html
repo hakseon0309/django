@@ -3,10 +3,14 @@
 {% block content %}
 <div class="content">
     <div class="title">
-        {{profile.0.name}}
+        home template title
     </div>
     <div class="post">
-        {% include 'app1/post1.html' %}
+        {% for post in posts %}
+        <div>
+            <h5>{{post.id}} - <a href="/post/{{post.id}}">{{post.title}}</a></h5>
+        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

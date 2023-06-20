@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path("", views.home, name="home"),
+    path("home/", views.home, name="home1"),
     # pk = primary key
-    path("room/<str:pk>/", views.content, name="contents"),
+    path("post/<str:pk>/", views.post, name="post"),
 ]

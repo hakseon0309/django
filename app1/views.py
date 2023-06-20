@@ -1,24 +1,24 @@
 from django.shortcuts import render
 
 
-rooms = [
-    {"id": 1, "name": "Lets learn python!"},
-    {"id": 2, "name": "Design with me"},
-    {"id": 3, "name": "Frontend developer"},
+posts = [
+    {"id": 1, "title": "number1 post", "desc": "content1"},
+    {"id": 2, "title": "number2 post", "desc": "content2"},
+    {"id": 3, "title": "number3 post", "desc": "content3"},
 ]
 
 profile = [{"name": "학선양", "server": "KR-Azshara"}]
 
 
 def home(request):
-    context = {"profile": profile}
+    context = {"posts": posts}
     return render(request, "app1/home.html", context)
 
 
-def content(request, pk):
-    content = None
-    for i in rooms:
+def post(request, pk):
+    post = None
+    for i in posts:
         if i["id"] == int(pk):
-            room = i
-    context = {"room": room}
-    return render(request, "app1/content.html")
+            post = i
+    context = {"post": post}
+    return render(request, "app1/post.html", context)
