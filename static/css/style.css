@@ -1,82 +1,130 @@
-/*
-*  html5resetcss
-*/
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
-body{line-height:1}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-nav ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before,blockquote:after,q:before,q:after{content:none}
-a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
-ins{background-color:#ff9;color:#000;text-decoration:none}
-mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
-del{text-decoration:line-through}
-abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
-table{border-collapse:collapse;border-spacing:0}
-hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-input,select{vertical-align:middle}
-
 :root {
-    --hc-background: rgb(30, 30, 30);
-    --hc-header: rgb(20, 20, 20);
-    --hc-aside: rgb(10, 10, 10);
-
     --hc-font: white;
+    --hc-background0: rgb(0, 0, 0);
+    --hc-background1: rgb(10, 10, 10);
+    --hc-background2: rgb(20, 20, 20);
+    --hc-background3: rgb(30, 30, 30);
+    --hc-background-grey: rgb(103, 103, 103);
 }
 
+
+/* Global */
+a {color: inherit; text-decoration: none;}
+body, p, h5 {margin: 0; padding: 0;}
+
+aside, section {
+    height: 1000px;
+}
+/* Global */
+
+
 body {
-    background-color: var(--hc-background);
+    background-color: var(--hc-background1);
     color: var(--hc-font);
 }
 
-header {
-    background-color: var(--hc-header);
-    width: 100%;
-    height: 20px;
-    line-height: 20px;
-}
-
-aside {
-    background-color: var(--hc-aside);
-    width: 200px;
-    height: 1000px;
-    
-}
-
-aside .banner {
-    width: 200px;
-}
-
-aside .profile {
-    background-color: var(--hc-background);
-    border-radius: 10px;
-    margin: 10px;
-    height: 100px;
-}
-
-aside .text {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-
-.container {
+.main_container {
     display: grid;
     grid-template-columns: 200px 1fr;
 }
 
-.content {
-
+aside {
+    background-color: var(--hc-background2);
+    display: flex;
+    flex-direction: column;
 }
 
-.title {
-    background-color: rgb(59, 59, 59);
-    height: 50px;
-    line-height: 50px;
-    padding-left: 15px;
+.lab_banner {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lab_banner_image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.search_bar {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.category {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    padding-right: 10px;
+    row-gap: 10px;
+}
+
+section {
+    background-color: var(--hc-background3);
+    padding: 20px 0 0 20px;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr auto;
 }
 
 .post {
-    padding-top: 15px;
-    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post_title {
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    background-color: var(--hc-background-grey);
+}
+
+.post_content {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.sidebar {
+    width: 200px;
+
+}
+
+.participants {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.preview_title {
+    font-size: 1.5rem;
+    background-color: var(--hc-background-grey);
+    overflow: hidden;
+    padding: 3px;
 }

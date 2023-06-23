@@ -1,8 +1,32 @@
-<aside>
-    <img class="banner" src= "https://media.tenor.com/iixn8CyQDywAAAAd/blue-archive.gif" alt=""/>
-    <div class="profile">
-        <div class="text">
-            학선 
-        </div>    
-    </div>
-</aside>
+<div class="lab_banner">
+    <img class="lab_banner_image" src="https://static-cdn.jtvnw.net/jtv_user_pictures/3c96d34dca9cd742-profile_image-300x300.jpeg" alt="">
+</div>
+
+<div class="profile">
+    <div class="profile_name"><a href="/">학선 연구소</a></div>
+    <!-- <div class="profile_description">설명적는 곳</div> -->
+</div>
+
+<div class="feature">
+    {% if request.user.is_authenticated %}
+        <div>안녕하세요! {{request.user}}님</div>
+        <a href="{% url 'logout' %}">Log Out</a>
+        <a href="{% url 'create-post' %}">Create Post</a>
+    {% else %}
+        <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+</div>
+
+<div class="search_bar">
+    <form method="GET" action="{% url 'home' %}">
+        <input type="text" name="q" placeholder="Search"/>
+    </form>
+</div>
+
+<div class="category">
+    <div><strong>Category</strong></div>
+    <div><a href="{% url 'home' %}">All</a></div>
+    {% for topic in topics %}
+        <div><a href="{% url 'home' %}?q={{topic.name}}">{{topic.name}}</a></div>
+    {% endfor %}
+</div>

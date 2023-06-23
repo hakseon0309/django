@@ -1,16 +1,30 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<div class="content">
-    <div class="title">
-        home template title
+<div class="post">
+    <div class="post_title">
+        <div>HOME</div>
+        <div>{{post_count}} post available</div>
     </div>
-    <div class="post">
+
+    <div class="post_content">
         {% for post in posts %}
-        <div>
-            <h5>{{post.id}} - <a href="/post/{{post.id}}">{{post.title}}</a></h5>
-        </div>
+            <div>
+                <div><a href="{% url 'post' post.id %}"><span class="preview_title">{{post.name}}</span></a></div>
+                <div class="preview_host">@{{post.host.username}}</div>
+                <div class="preview_category">{{post.topic.name}}</div>
+                {% if request.user == post.host %}
+                    <a href="{% url 'update-post' post.id %}">Edit</a>
+                    <a href="{% url 'delete-post' post.id %}">Delete</a>
+                {% endif %}
+                <hr>
+            </div>
         {% endfor %}
     </div>
 </div>
+
+<div class="sidebar">
+    {% include 'app1/activity_component.html' %}
+</div>
+
 {% endblock %}

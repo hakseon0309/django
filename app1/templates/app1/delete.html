@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="post_title">
+    <div>{{obj}}</div>
+</div>
+
+<div class="post">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>정말 삭제하시겠어요?</p>
+        <input type="submit" value="확인" />
+        <a href="{{request.META.HTTP_REFERER}}">취소</a>
+    </form>
+</div>
+{% endblock %}

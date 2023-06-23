@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="post_title">
+    <div>로그인 하기</div>
+</div>
+
+<div class="post">
+    {% if page == 'login' %}
+        <div>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <lable>Username:</lable>
+                <input type="text" name="username" placeholder="Enter Username" />
+        
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Enter Password" />
+        
+                <input type="submit" value="Login" />
+            </form>
+            <p>아직 회원가입을 안하셨나요?</p>
+            <a href="{% url 'register' %}">회원 가입 하기</a>
+        </div>
+    {% else %}
+        <div>
+            <form method="POST" action="">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="회원가입" />
+            </form>
+            <p>이미 회원이신가요?</p>
+            <a href="{% url 'login' %}">로그인 하기</a>
+        </div>
+    {% endif %}
+    
+    <hr>
+
+    <div class="messages">
+        {% if messages %}
+            {% for message in messages %}
+                {{message}}
+            {% endfor %}
+        {% endif %}
+    </div>
+    
+
+</div>
+{% endblock %}
