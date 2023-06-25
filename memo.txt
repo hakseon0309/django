@@ -1,14 +1,2 @@
-{time:0:20}0:20 모여1 - 연치난사  꽁양  Sindorei 
-{time:1:06}1:06 모여2 - 율신사 연치난사 Highclass 마구괴롭히기
-{time:1:52}1:52 사이페1 - 연치난사  Highclass
-{time:2:35}2:35 모여3 - Highclass  Sindorei
-{time:3:21}3:21 모여4 - 연치난사  꽁양  Personal
-{time:4:06}4:06 사이페2 - 연치난사  Highclass
-{time:4:50}4:06 모여5 - 율신사
-{time:5:25}5:25 격돌8 - 연치난사
-{time:5:36}5:36 모여6 - 율신사  Highclass  탱힐만함
-{time:5:57}5:36 격돌9 - 마구괴롭히기  Sindorei
-
-
-
-
+1. 디스코드 파티 신청 자동화
+- 
