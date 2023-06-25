@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import Post, MrtMemoMaker
+from .models import Post
 
 
 class PostForm(ModelForm):

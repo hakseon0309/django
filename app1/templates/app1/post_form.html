@@ -1,14 +1,21 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<div class="post_title">
-    <div>글 작성하기</div>
-</div>
 <div class="post">
-    <form method="POST" action="">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Submit" />
-    </form>
+
+    <div class="post_title">
+        <div>글 작성하기</div>
+    </div>
+
+    <div class="post_content">
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
 </div>
+
+
 {% endblock %}

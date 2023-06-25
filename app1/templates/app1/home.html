@@ -2,9 +2,9 @@
 
 {% block content %}
 <div class="post">
+
     <div class="post_title">
-        <div>HOME</div>
-        <div>{{post_count}} post available</div>
+        {% include 'app1/title_component.html' %}
     </div>
 
     <div class="post_content">
@@ -21,10 +21,6 @@
             </div>
         {% endfor %}
     </div>
-</div>
 
-<div class="sidebar">
-    {% include 'app1/activity_component.html' %}
 </div>
-
 {% endblock %}

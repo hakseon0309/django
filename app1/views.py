@@ -78,6 +78,7 @@ def post(request, pk):
     post = Post.objects.get(id=pk)
     post_messages = post.message_set.all().order_by("-created")
     participants = post.participants.all()
+    topics = Topic.objects.all()
 
     if request.method == "POST":
         message = Message.objects.create(
@@ -90,6 +91,7 @@ def post(request, pk):
         "post": post,
         "post_messages": post_messages,
         "participants": participants,
+        "topics": topics,
     }
     return render(request, "app1/post.html", context)
 
